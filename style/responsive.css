@@ -1,0 +1,58 @@
+/* Responsive for mobile */
+@media screen and (max-width: 700px) {
+  #bookSide-content {
+    display: flex;
+    flex-direction: column;
+  }
+  #finished,
+  #unFinished {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  #mainSide {
+    margin: 0;
+    height: 100vh;
+    background-image: url("../images/library.jpg");
+  }
+  #mainSide-content {
+    color: #ffffff;
+    width: 100%;
+  }
+  .content-wrapper .mainSide .mainSide-content h1 > span {
+    font-family: "Explora", serif;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: 45px;
+  }
+  #mainSide-rigth {
+    display: none;
+  }
+}
+/* End Responsive for mobile*/
+
+/* Responsive for footer */
+@media screen and (min-width: 24.375em) {
+  .legal .legal__links {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 1;
+  }
+
+  .nav__item--extra {
+    flex-grow: 2;
+  }
+
+  .footer__addr {
+    flex: 1 0px;
+  }
+
+  .footer__nav {
+    flex: 2 0px;
+  }
+}
+/* End Responsive for footer */

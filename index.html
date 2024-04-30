@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digibooks</title>
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="style/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Junge&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Junge&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Dynalight&family=Explora&family=Noto+Serif+Ottoman+Siyaq&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <main class="mainSide" id="mainSide">
+        <div class="mainSide-content" id="mainSide-content">
+          <h1>Welcome to <span>Digibooks</span> Apps</h1>
+          <p>you can keep your own reading list of books as well as archivally manage and delete them from the reading list.</p>
+          <a href="#bookSide" class="btn">Try Now</a>
+        </div>
+        <div class="mainSide-rigth" id="mainSide-rigth">
+          <img src="./images/library.jpg" alt="" />
+        </div>
+      </main>
+      <section class="add-book hidden">
+        <h4>Masukan Data buku</h4>
+        <form action="#" id="form-book" class="form-book">
+          <input type="text" id="title" name="book-title" placeholder="Masukan Judul " required />
+          <input type="text" id="author" name="book-author" placeholder="Masukan Nama Author" required />
+          <input type="date" id="date" placeholder="Masukan Tahun Terbit" required />
+          <div class="btn-wrapper">
+            <button class="btn-submit" type="submit" name="submit">Simpan</button>
+            <a href="#bookSide" class="btn" onclick="closeModal()" class="closeForm">Batal</a>
+          </div>
+        </form>
+      </section>
+      <section class="bookSide" id="bookSide">
+        <div class="searchBar">
+          <input class="cariInput" type="text" placeholder="Find book.." />
+          <button class="btnAddBook" onclick="showModal()">Add Book</button>
+        </div>
+        <div class="bookSide-content" id="bookSide-content">
+          <div class="unFinished" id="unFinished">
+            <h2>UnFinished</h2>
+            <div class="card-wrapper-unFinished">
+              <!-- <div class="card" data-aos="fade-up">
+                <div class="deleteBtn">
+                  <img src="./images/close.png" alt="" />
+                </div>
+                <img src="./images/bookFace/1.jpg" alt="" />
+                <div class="infoBar">
+                  <div class="bookInfo">
+                    <h4 class="card-title">Pirates Of caribean</h4>
+                    <p>Anton Wijaya</p>
+                    <h6>25 - 10 - 2001</h6>
+                  </div>
+                  <div class="bookAction">
+                    <button class="bookBtn">Done</button>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div class="finished" id="finished">
+            <h2>Finished</h2>
+            <div class="card-wrapper-finished">
+              <!-- <div class="card" data-aos="fade-up">
+                <div class="deleteBtn">
+                  <img src="./images/close.png" alt="" />
+                </div>
+                <img src="./images/bookFace/2.jpg" alt="" />
+                <div class="infoBar">
+                  <div class="bookInfo">
+                    <h4>Pirates Of caribean</h4>
+                    <p>Anton Wijaya</p>
+                    <h6>25 - 10 - 2001</h6>
+                  </div>
+                  <div class="bookAction">
+                    <button class="undoBtn">Undo</button>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="overlay hidden"></div>
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="footer__logo">Digibooks</h1>
+      </div>
+
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Our Media</h2>
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Instagram</a>
+            </li>
+            <li>
+              <a href="#">Twitter</a>
+            </li>
+            <li>
+              <a href="#">Shoope</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav__item">
+          <h2 class="nav__title">Legal</h2>
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#">Terms of Use</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="legal">
+        <p>&copy; 2024 Alif farid rahman.</p>
+      </div>
+    </footer>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./js/index.js"></script>
+    <script src="./js/modal.js"></script>
+  </body>
+</html>
